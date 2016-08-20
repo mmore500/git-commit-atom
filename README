@@ -1,0 +1,15 @@
+################################################################################
+# git-commit-atom
+# Author: Matthew Moreno
+# Contact: matthew.andres.moreno@gmail.com
+# Version: August 20, 2016
+################################################################################
+# Allows git commit files to be edited in the current pane; avoids having to
+# launch another instance of Atom. This approach is directly inspired by AJ
+# Foster's "git-commit-atom.sh", presented at
+# https://aj-foster.com/2016/git-commit-atom/. However, this project is
+# implemented in Go for better portability and reliability.
+
+################################################################################
+# USAGE
+################################################################################
