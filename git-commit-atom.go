@@ -11,6 +11,7 @@ import (
     "github.com/urfave/cli"
 )
 
+// little helper function
 func check(e error) {
     if e != nil {
         panic(e)
