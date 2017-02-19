@@ -76,6 +76,7 @@ setup_merge_msg_notifier = (editor) ->
 
 # Set up for all editors to be screened for commit messages.
 atom.workspace.observeTextEditors(setup_commit_msg_notifier)
+atom.workspace.observeTextEditors(setup_merge_msg_notifier)
 ~~~
 
 Install the Go script and then configure Git to use the Go script.
