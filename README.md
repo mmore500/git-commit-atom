@@ -60,6 +60,20 @@ setup_commit_msg_notifier = (editor) ->
   # Return this, else weird things may happen. Anyone understand why?
   true
 
+# The following looks at all new editors. If the editor is for a MERGE_MSG
+# file, it sets up a callback for a magic token to be written when the editor
+# is closed.
+#
+setup_merge_msg_notifier = (editor) ->
+  if editor.buffer?.file?.getBaseName() == "MERGE_MSG"
+    path = editor.buffer.file.getPath()
+    editor.onDidDestroy ->
+      commit_msg_notifier(path)
+
+  # Return this, else weird things may happen. Anyone understand why?
+  true
+
+
 # Set up for all editors to be screened for commit messages.
 atom.workspace.observeTextEditors(setup_commit_msg_notifier)
 ~~~

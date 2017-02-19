@@ -101,7 +101,7 @@ func main(){
     filename := c.Args().Get(0)
 
 
-    if path.Base(filename) == "COMMIT_EDITMSG" {
+    if path.Base(filename) == "COMMIT_EDITMSG" || path.Base(filename) == "MERGE_MSG" {
       handle_COMMIT_EDITMSG(filename)
     } else {
       exec.Command("atom", "--wait", filename).Run()
