@@ -43,7 +43,7 @@ func handle_COMMIT_EDITMSG(filename string){
   done_terminal := make(chan bool)
   setup_monitor_terminal(done_terminal)
 
-  exec.Command("atom", filename).Run()
+  exec.Command("atom", "-f", filename).Run()
   select {
    case <-done_atom:
      fmt.Println("Commit completed by Atom.")
