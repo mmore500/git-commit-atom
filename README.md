@@ -35,7 +35,8 @@ git config core.editor "git-commit-atom"
 on them.
 
 ## Usage
-Once `git-commit-atom` is configured as Git's editor, Git `COMMIT_EDITMSG`, `MERGE_MSG`, `git-rebase-todo`, and `.diff` files will open in the current pane of Atom. To complete the message editing process simply close the tab (`cmd-w` is convenient) if the Atom package `git-edit-atom` is installed or, if not, enter `quit` or `done` at the terminal.
+Once `git-commit-atom` is configured as Git's editor, Git `COMMIT_EDITMSG`, `TAG_EDITMSG`, `MERGE_MSG`, `git-rebase-todo`, and `.diff` files will open in the current pane of Atom.
+To complete the message editing process simply close the tab (`cmd-w` is convenient) if the Atom package `git-edit-atom` is installed or, if not, enter `quit` or `done` at the terminal.
 
 ## Implementation
 This project has two components: a standalone Go script that acts as the editor called by Git during the commit process and the Atom package `git-edit-atom`.
