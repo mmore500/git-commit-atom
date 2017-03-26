@@ -96,7 +96,7 @@ func main(){
     `git-commit-atom filename
     signal commit completed by:
       entering "quit" or "done" at the terminal or
-      appending ###ATOM EDIT COMPLETE### to the COMMIT_EDITMSG`
+      appending ##ATOM EDIT COMPLETE## to the COMMIT_EDITMSG`
   app.Action = func(c *cli.Context) error {
     filename := c.Args().Get(0)
 
