@@ -11,13 +11,6 @@ Together with [sister Atom package `git-edit-atom`](https://atom.io/packages/git
 ![A screenshot of git-edit-atom and git-commit-atom in action together](https://thumbs.gfycat.com/BaggyFreshBoaconstrictor-size_restricted.gif)
 
 ## Prerequisites
- * A working installation of Go tools (need it? see [here](https://golang.org/doc/install)).
- * be sure your `GOBIN` is included in your `PATH`! If your `PATH` isn't already properly configured, try adding the following lines to your `.bash_profile`.
- ~~~bash
- export GOPATH=$HOME/go
- export GOBIN=$GOPATH/bin
- export PATH=$PATH:$GOPATH/bin
- ~~~
  * [Sister Atom package `git-edit-atom`](https://atom.io/packages/git-edit-atom), highly recommended.
 
 ## Installation
@@ -26,12 +19,19 @@ There are two steps to the installation process:
  * configuring Git to use the Go script.
 
 There are two ways to install the Go script.
-If you have Go installed on your machine, you can use the following commands to install from source.
+If you have Go installed on your machine (want it? see [here](https://golang.org/doc/install)), you can use the following commands to install from source.
 ~~~bash
 go get github.com/mmore500/git-commit-atom
 go install github.com/mmore500/git-commit-atom
 ~~~
-Otherwise, you can find pre-built executable binaries [here](https://github.com/mmore500/git-commit-atom/releases/latest).
+If your are installing from source, be sure your `GOBIN` is included in your `PATH`! If your `PATH` isn't already properly configured, try adding the following lines to your `.bash_profile`.
+~~~bash
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
+~~~
+
+If you don't want to build from source, you can find pre-built executable binaries [here](https://github.com/mmore500/git-commit-atom/releases/latest).
 All you have to do is
  * download zipped folder appropriate for your operating system and architecture,
  * unzip it, and
