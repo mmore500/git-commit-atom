@@ -25,6 +25,7 @@ Together with [sister Atom package `git-edit-atom`](https://atom.io/packages/git
 Install the Go script and then configure Git to use the Go script.
 At the terminal, you'll need to run the following commands.
 ~~~bash
+go get github.com/mmore500/git-commit-atom
 go install github.com/mmore500/git-commit-atom
 git config --global core.editor "git-commit-atom"
 ~~~
