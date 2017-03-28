@@ -1,5 +1,4 @@
 ## git-commit-atom
-------------
 Want to use Atom's handy `COMMIT_EDITMSG` syntax highlighting?
 🙋
 
