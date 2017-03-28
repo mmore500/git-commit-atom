@@ -93,6 +93,7 @@ func main(){
   app := cli.NewApp()
   app.Name = "git-commit-atom"
   app.UsageText = fmt.Sprintf("git-commit-atom [filename]\n\nsignal message edit completed by:\n\t* entering 'quit' or 'done' at the terminal or\n\t* appending '##ATOM EDIT COMPLETE##' to the COMMIT_EDITMSG")
+  app.Version = "0.4.0"
   app.Authors = []cli.Author{
     cli.Author{
       Name:  "Matthew Andres Moreno",
