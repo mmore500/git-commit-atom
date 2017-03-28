@@ -92,11 +92,13 @@ func setup_monitor_file(done_atom chan bool, filename string) (watcher *fsnotify
 func main(){
   app := cli.NewApp()
   app.Name = "git-commit-atom"
-  app.Usage =
-    `git-commit-atom filename
-    signal commit completed by:
-      entering "quit" or "done" at the terminal or
-      appending ##ATOM EDIT COMPLETE## to the COMMIT_EDITMSG`
+  app.UsageText = fmt.Sprintf("git-commit-atom [filename]\n\nsignal message edit completed by:\n\t* entering 'quit' or 'done' at the terminal or\n\t* appending '##ATOM EDIT COMPLETE##' to the COMMIT_EDITMSG")
+  app.Authors = []cli.Author{
+    cli.Author{
+      Name:  "Matthew Andres Moreno",
+      Email: "matthew.andres.moreno@gmail.com",
+    },
+  }
   app.Action = func(c *cli.Context) error {
     filename := c.Args().Get(0)
 
