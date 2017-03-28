@@ -46,9 +46,9 @@ func handle_COMMIT_EDITMSG(filename string){
   exec.Command("atom", "-f", filename).Run()
   select {
    case <-done_atom:
-     fmt.Println("Commit completed by Atom.")
+     fmt.Println("Edit completed by Atom.")
    case <-done_terminal:
-     fmt.Println("Commit completed by terminal.")
+     fmt.Println("Edit completed by terminal.")
   }
 }
 
