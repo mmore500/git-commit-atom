@@ -104,7 +104,7 @@ func main(){
     filename := c.Args().Get(0)
 
 
-    if path.Base(filename) == "COMMIT_EDITMSG" || path.Base(filename) == "TAG_EDITMSG" || path.Base(filename) == "MERGE_MSG" || path.Base(filename) == "git-rebase-todo" || path.Ext(filename) == ".diff" {
+    if path.Base(filename) == "COMMIT_EDITMSG" || path.Base(filename) == "TAG_EDITMSG" || path.Base(filename) == "MERGE_MSG" || path.Base(filename) == "PULLREQ_EDITMSG" || path.Base(filename) == "git-rebase-todo" || path.Ext(filename) == ".diff" {
       handle_COMMIT_EDITMSG(filename)
     } else {
       exec.Command("atom", "--wait", filename).Run()
